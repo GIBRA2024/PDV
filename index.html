@@ -13,8 +13,8 @@
     <img src="Imagenes/LOGO01.png" alt="Foto de perfil" class="profile-pic">
 
     <div class="social-buttons">
-        <a href="https://drive.google.com/file/d/1UQ4zY8b3Jc665kC8Vn--5M4fNwbDuGZU/view?usp=sharing"
-           target="_blank"><img src="Imagenes/star-solid.png" alt="Pagina Web">Porkweek</a>
+        <a id="link-video" href="#"
+            target="_blank"><img src="Imagenes/star-solid.png" alt="Pagina Web">Porkweek</a>
         <a href="https://drive.google.com/file/d/1Lkmy4ta2cl_fSIjF3MM0diWHYmW2IgBc/view"
            target="_blank"><img src="Imagenes/file-lines-solid.png" alt="Pagina Web">Brochure</a>
         <a href="https://www.cervalle.com/"
@@ -37,5 +37,16 @@
         <p><a class="link-footer" href="https://www.instagram.com/gibra_company/" target="_blank">&copy; 2025 Gibra. Todos los derechos reservados.</a></p>
     </footer>
 </div>
+
+    <script>
+     fetch("https://gibra2024.github.io/Enlace-Cervalle/link-video.txt") // tu URL aquí
+       .then(res => res.text())
+       .then(link => {
+         document.getElementById("link-video").href = link.trim();
+       })
+       .catch(error => {
+         console.error("No se pudo cargar el link:", error);
+       });
+   </script>
 </body>
 </html>
